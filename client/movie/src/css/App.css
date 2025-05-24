@@ -1,0 +1,136 @@
+:root {
+  --bg-color: #0f0f0f;
+  --card-bg: #1e1e1e;
+  --primary-red: #e50914;        /* Netflix red */
+  --accent-yellow: #f5c518;      /* IMDb yellow */
+  --text-color: #f5f5f5;
+  --text-muted: #999;
+  --border-color: #333;
+  --box-shadow: rgba(0, 0, 0, 0.7);
+  --max-content-width: 1200px;
+}
+
+/* Global Reset & Typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--primary-red);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Main Layout */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: var(--max-content-width);
+  /* margin: 0 auto; */
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 15, 15, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Container */
+.modal-content {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 6px 20px var(--box-shadow);
+  position: relative;
+  color: var(--text-color);
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-red {
+  background-color: var(--primary-red);
+  color: white;
+}
+
+.btn-red:hover {
+  background-color: #b0060f;
+}
+
+.btn-yellow {
+  background-color: var(--accent-yellow);
+  color: black;
+}
+
+.btn-yellow:hover {
+  background-color: #d5a100;
+}
+
+/* Navbar Support */
+.navbar {
+  background-color: var(--card-bg);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px var(--box-shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  margin-left: 1.5rem;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+/* Responsive Support */
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
+  }
+
+  .navbar a {
+    margin-left: 1rem;
+    font-size: 0.95rem;
+  }
+}

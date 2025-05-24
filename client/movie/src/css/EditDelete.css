@@ -1,0 +1,134 @@
+/* Overlay that dims background */
+.edit-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 15, 15, 0.85); /* slightly darker */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000; /* below toasts (z-index: 9999), but above app content */
+  backdrop-filter: blur(2px); /* optional, for modern look */
+}
+
+/* Modal content container */
+.edit-form__container {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+  outline: none;
+  color: var(--text-color);
+  max-height: 90vh; /* Make it fit within the viewport */
+  overflow-y: auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Input styles */
+.edit-form__container input,
+.edit-form__container textarea,
+.edit-form__container select {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.4rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+.edit-form__container input.error,
+.edit-form__container textarea.error {
+  border-color: red;
+}
+
+.error-msg {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: -0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Star rating */
+.star-rating {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.star-rating span {
+  transition: transform 0.2s ease;
+}
+
+.star-rating span:hover {
+  transform: scale(1.2);
+}
+
+.star-rating .selected {
+  color: gold;
+}
+
+/* Button styles */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.save-btn,
+.cancel-btn,
+.delete-btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.save-btn {
+  background-color: var(--accent-yellow);
+  color: black;
+}
+
+.save-btn:hover {
+  background-color: #d5a100;
+}
+
+.cancel-btn {
+  background-color: #555;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #777;
+}
+
+.delete-btn {
+  background-color: var(--primary-red);
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #b0060f;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .edit-form__container {
+    padding: 1.2rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}

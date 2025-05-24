@@ -1,0 +1,77 @@
+body {
+  background-color: #1c1c1c;
+  color: #e5e5e5;
+  font-family: 'Lora', serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Search Bar */
+.searchBar {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #d9d9d9;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #333;
+  border: 1px solid #444;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+input[type="text"]::placeholder {
+  color: #777;
+}
+
+input[type="text"]:focus {
+  border-color: #666;
+}
+
+/* Scoped results container styles */
+.results-container {
+  margin-top: 10px;
+}
+
+.results-container > div {
+  background-color: #333;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.results-container > div:hover {
+  background-color: #444;
+}
+
+.results-container > div strong {
+  font-size: 1.2rem;
+  color: #e5e5e5;
+}
+
+.genre {
+  color: #999;
+  margin-left: 5px;
+  font-style: italic;
+}
+
+/* Highlight active suggestion for keyboard navigation */
+.active-suggestion {
+  background-color: #555;
+  outline: 2px solid #FFD700;
+}

@@ -1,0 +1,19 @@
+# Node modules
+client/movie/node_modules/
+server-side/node_modules/
+
+# Build output (if you build React)
+client/build/
+
+# Environment variables
+client/.env
+server/.env
+
+# Logs
+*.log
+
+# OS junk
+.DS_Store
+
+# Optional: MySQL dumps or backups
+# *.sql

@@ -1,0 +1,71 @@
+body {
+  background-color: #1a1a1a;
+  color: #ccc;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.app {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #FFD700;
+  text-shadow: 2px 2px 5px black;
+}
+
+.movie-card-detail {
+  border: 2px solid #444;
+  padding: 15px;
+  border-radius: 5px;
+  background: rgba(20, 20, 20, 0.9);
+}
+
+.movie-card-detail h1 {
+  font-size: 32px;
+  color: #fff;
+  text-shadow: 4px 4px 10px black;
+}
+
+.movie-card-detail p {
+  font-size: 18px;
+  color: #aaa;
+}
+
+.star {
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  color:#FFD700;
+}
+
+.star:hover {
+  color: #FFD700;
+}
+
+.button-group-detail {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+button {
+  background: #333;
+  color: #FFD700;
+  border: 2px solid #FFD700;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #FFD700;
+  color: #1a1a1a;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+}
